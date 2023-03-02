@@ -5,11 +5,14 @@ body {
 
 #app {
   display: grid;
-  grid-auto-rows: minmax(150px, auto);
+  grid-auto-rows: auto auto 1fr 1fr;
   /* grid-template-columns:  */
-  height: 100%;
-  background: #f23557;
-  color: #f0d43a;
+  height: 110vh;
+  /* background: #f23557; */
+  background-image: url(images/nature.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #000000;
   justify-content: center;
   grid-gap: 1em;
   font-size: 20px;
@@ -20,7 +23,9 @@ body {
 }
 
 .entry {
-  background: rgba(59, 74, 107, 0.4);
+  background: #98b7e7;
+  border-radius: 1rem;
+  /* display: none; */
 }
 
 #entryHolder {
@@ -38,6 +43,7 @@ body {
 }
 
 .headline {
+  font-size: 4rem;
 }
 .title {
 }
@@ -52,33 +58,37 @@ input {
   display: block;
   height: 60px;
   width: 320px;
-  background: #22b2da;
-  color: #f0d43a;
+  background: #9eb8c7;
+  color: #000000;
   font-size: 20px;
   font-family: "Oswald", sans-serif;
-  border: none;
+  border-radius: 1.5rem;
 }
 
 button {
   width: 400px;
   height: 100px;
-  background: #3b4a6b;
-  color: #f0d43a;
+  background: #9eb8c7;
+  color: #000000;
   font-size: 26px;
   font-family: "Oswald", sans-serif;
-  border: none;
+  border-radius: 1.5rem;
   box-shadow: 2px 4px 5px #444;
   cursor: pointer;
+}
+button:hover {
+  opacity: 0.9;
 }
 h1 {
   font-size: 36px;
 }
 
 textarea {
-  background: #22b2da;
-  color: #f0d43a;
+  background: #9eb8c7;
+  color: #000000;
   font-size: 20px;
   font-family: "Oswald", sans-serif;
+  border-radius: 1.5rem;
 }
 /* Reset style for HTML element on active to have no border*/
 input:focus,
@@ -90,18 +100,18 @@ button:focus {
 /* Style for Placeholder Text*/
 ::placeholder {
   /* Firefox, Chrome, Opera */
-  color: #f0d43a;
+  color: #000000;
   font-family: "Oswald", sans-serif;
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: #f0d43a;
+  color: #000000;
   font-family: "Oswald", sans-serif;
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: #f0d43a;
+  color: #000000;
   font-family: "Oswald", sans-serif;
 }
