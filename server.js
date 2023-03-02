@@ -1,5 +1,5 @@
 // Setup empty JS object to act as endpoint for all routes
-projectData = [];
+projectData = {};
 
 // Require Express to run server and routes
 const express = require("express");
@@ -26,26 +26,21 @@ const server = app.listen(port, () => {
 //get routes
 app.get("/getAll", (req, res) => {
   res.send(projectData);
-  console.log(`getALL: ${projectData}`);
+  console.log(`getALL: `);
+  console.log(projectData);
 });
-const fakeData = {
-  temperature: "lion",
-  Date: "Lions are fun",
-};
-app.get("/allData", addFakeAnimal);
 
-function addFakeAnimal(req, res) {
-  // console.log("res");
-  res.send(fakeData);
-}
 //post routes
 app.post("/postAll", (req, res) => {
-  console.log(`postALL: ${req.body}`);
-  let userEntry = {
-    temperature: req.body.temperature,
-    date: req.body.date,
-    userResponse: req.body.userResponse,
-  };
-  projectData.push(userEntry);
+  console.log(`postALL: `);
+  console.log(req.body);
+
+  projectData.data = req.body;
+  projectData.date = req.body.date;
+  projectData.userZipCode = req.body.zipCode;
+  projectData.cityName = req.body.city;
+  projectData.temperature = req.body.temperature;
+  projectData.userFeeling = req.body.userResponse;
   res.send(projectData);
+  console.log(projectData);
 });
